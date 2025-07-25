@@ -3,86 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test RevoU</title>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-    <style>
-        
-    </style>
+    <title>RevoU Project Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
-    <h1 style="color: crimson;">
-        Hello World!
-    </h1><hr>
-    <p>Halo nama saya <br> Satya Permana Alan</p>
-    <h1">Ini heading 1</h1>
-    <h2>Ini heading 2</h2>
-    <h3>Ini heading 3</h3>
-    <h4>Ini heading 4</h4>
-    <h5>Ini heading 5</h5>
-    <h6>Ini heading 6</h6>
-    <p>Teks ini ada <b>bold</b> nya dan ada <i>italic</i> nya</p>
-    <p>H<sub>2</sub>O</p>
-
-    <h1>Bullet point</h1>
-    <ul type="circle">
-        <li>Pisang <p>Pisang adalah buah yang berwarna kuning</p></li>
-        <li>Mangga</li>
-        <li>Rambutan</li>
-    </ul>
-
-    <h1>Ordered List</h1>
-    <ol type="I">
-        <li>Buka vscode</li>
-        <li>Ketik beberapa baris code</li>
-        <li>Setelah itu save dan upload ke github</li>
-    </ol>
-
-    <h1>Table</h1>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>Kampus</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Satya Permana Alan</td>
-                <td>Poliban</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Nabil</td>
-                <td>Poliban</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h1>Image</h1>
-    <img src="Image/SAVE_20250127_232525[1].jpg" alt="" width="500px">
-    <p>Gambar di atas merupakan karakter dari honkai star rail bernama Ruan Mei.</p>
-
-    <h1>Link</h1>
-    <p>Link berikut menuju ke second <a href="second.html#L1">HTML</a></p>
-
-    <h1>form</h1>
-    <form action="">
-        <label for="">Nama</label>
-        <input type="text"><br>
-        <label for="">Umur</label>
-        <input type="number"><br>
-        <label for="">comment</label><br>
-        <textarea name="" id="" placeholder="Silahkan isi komentar"></textarea><br>
-        <label for="">Kelamin</label>
-        <input type="radio" name="Laki laki">laki laki
-        <input type="radio">perempuan<br>
-        <select name="" id="">
-            <option value="NasiGoreng">Nasgor</option>
-            <option value="Mie Ayam">Mie ayam</option>
-            <option value="Bakso">Bakso</option>
-        </select>
-    </form>
+    <main>
+        <!-- Judul -->
+        <header>
+            <h1>Todo List</h1>
+        </header>
+        <!-- Todo Form -->
+        <form id="todo-form">
+            <div>
+                <label for="todo-input">Add a new task:</label><br>
+                <input type="text" id="todo-input" placeholder="Enter your task here">
+            </div>
+            <div>
+                <label for="todo-date">Input Date:</label><br>
+                <input type="date" id="todo-date">
+            </div>
+            <div>
+                <button type="button" class="button1" onclick="addTask();">+</button>
+            </div>
+        </form>
+        <!-- Todo List -->
+        <section>
+            <div class="button-container">
+                <button class="button2" onclick="filterTasks();">Filter</button>
+                <button class="button3" onclick="deleteAllTask();">Delete All</button>
+            </div>
+            <h2>Task List</h2>
+            <div id="todo-list">
+                <p>No Task assign</p>
+            </div>
+        </section>
+        <script src="js/script.js"></script>
+    </main>
 </body>
 </html>
